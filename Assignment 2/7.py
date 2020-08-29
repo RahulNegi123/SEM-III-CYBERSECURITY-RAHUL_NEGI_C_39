@@ -1,20 +1,13 @@
-print("Enter limit : \n")
-limit=int(input())
-
-print("[", end =" ")
-
-for possiblePrime in range(2, limit+1):
-	isPrime = True
-	for num in range(2, possiblePrime):
-		if possiblePrime % num == 0:
-			isPrime = False
-	if isPrime:
-		res = (possiblePrime,"Prime") 
-	else:
-		res = (possiblePrime,"Non Prime")
-	if possiblePrime !=limit:
-		print(res, "," , end =" ")
-	else:
-		print(res, end =" ")
-
-print("]", end =" ")
+n=int(input("Enter the limit : \n"))
+lst={}
+lst[2]="Prime"
+print("[", end =" ") 
+for i in range(2,n+1):
+    for j in range(2,i):
+        if(i%j==0):
+            lst[i]='Non prime'
+            break
+        else:
+            lst[i]='prime'
+print(lst, end =" ")
+print("]", end =" ") 

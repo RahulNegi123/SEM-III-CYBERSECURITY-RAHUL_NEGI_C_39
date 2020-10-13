@@ -1,0 +1,3 @@
+var num1=Number(prompt("Enter  the first number to add"));
+var num2=Number(prompt("Enter the second number to add"));
+alert(a+b);

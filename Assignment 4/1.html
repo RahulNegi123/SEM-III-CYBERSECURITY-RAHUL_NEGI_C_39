@@ -1,0 +1,36 @@
+<html>
+<head>
+<tittle> Assignment 4 Q1, Random Color Generation </tittle>
+<style type="text/css">
+#circle 
+{
+    width: 400px;
+    height: 400px;
+    background-color: rgba(201, 76, 76, 0.3);
+    border-color: white;
+    border-radius: 70%;
+}
+</style>
+</head>
+<body>
+<div id="circle"></div>
+<!--------------------------Javascript --------------------------->
+<script type="text/javascript">
+function generateCOLOR() 
+{
+    colors="123456789ABCDEF";
+    color='#';
+    for(var i=0;i<6;i++) 
+    {
+        random=Math.ceil(Math.random()*14);
+        color=color+colors[random];
+    }
+    console.log(color);
+    circle.style.backgroundColor=color;
+}
+circle=document.getElementById('circle');
+</script>
+<!-- ------------------------Javascript -------------------------->
+<input type="button" value="Click here to change colors" id="button1" onclick="generateCOLOR();" />
+</body>
+</html>
